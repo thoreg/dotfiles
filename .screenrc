@@ -1,0 +1,22 @@
+# ===========================================
+#      CAPTION
+# ===========================================
+caption always "%{= kw}%-w%{= BW}%n %t%{-}%+w "
+
+# ===========================================
+#       HARDSTATUS
+# ===========================================
+# hardstatus alwayslastline "%{+b kr}host: %{kw}%H%{kg} %c - %D %d.%m.%Y %{kr}(load: %l) %-26=%1`"
+#
+# # display audible bell
+# vbell on
+#
+# # disable the the copyright splash screen
+startup_message off
+#
+# # define some usefull options
+defscrollback 100000
+#
+deflog on
+# tell screen to log to /var/log/serial.$WINDOW
+logfile /tmp/serial.%n
