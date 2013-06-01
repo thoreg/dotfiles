@@ -10,7 +10,8 @@ call pathogen#infect()
 " colorscheme settings
 syntax on
 syntax enable
-set background=light
+"set background=light
+set background=dark
 let g:solarized_termcolors=512
 colorscheme solarized
 set colorcolumn=100
@@ -19,6 +20,7 @@ au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
 set cursorline
 set cursorcolumn
+"
 set number
 
 " map <F9> :set nonumber<CR>
@@ -30,8 +32,10 @@ set hlsearch
 "
 " Ignore case when searching
 set ignorecase
+
 " When searching try to be smart about cases
 set smartcase
+
 "
 set tabstop=4
 set shiftwidth=4
@@ -81,17 +85,6 @@ map <F8> :!ctags -R -f 'tags'<CR>
 map <F4> :tn<CR>
 map <F5> :tp<CR>
 set tags=tags,/Volumes/Image/satchmo/tags,$HOME/.vim/tags/python.ctags
-"
-" OmniCompletion
-"set ofu=syntaxcomplete#Complete
-"autocmd FileType python set omnifunc=pythoncomplete#Complete
-"if has("python")
-"    python import sys,os
-"    python sys.path.append('/home/thoreg/workspace/momox/src/')
-"    python os.environ['DJANGO_SETTINGS_MODULE'] = 'momox.settings'
-"endif
-"inoremap <C-Space> <C-x><C-o>
-"
 "
 " FuzzyFinder - shortcuts
 map FF :FufCoverageFile<CR>
@@ -164,10 +157,10 @@ set guioptions-=T
 if has('gui_macvim')
 "    set guifont=Inconsolata:h16
 " Desktop
-"set guifont=Inconsolata:h15
-" Laptop arbeit
+set guifont=Inconsolata:h15
+" Laptop
 "set guifont=Inconsolata:h12
-set guifont=Inconsolata:h13
+"set guifont=Inconsolata:h13
 else
     set guifont=Inconsolata\ 13
 endif
@@ -213,3 +206,7 @@ map <C-l> <C-w>l
 iab ed </div>
 iab ep </p>
 iab br <br/>
+
+let g:jedi#popup_on_dot = 0
+let g:jedi#use_tabs_not_buffers = 0
+
