@@ -72,8 +72,10 @@ au BufWinLeave * mkview
 au BufWinEnter * silent loadview
 
 "
-" Nerdtree
-autocmd vimenter * NERDTree
-autocmd vimenter * if !argc() | NERDTree | endif
-map <C-n> :NERDTreeToggle<CR>
+" NERDTree
+" Toggle NERDTree window on ctrl-x
+map <C-x> :NERDTreeToggle<CR>
+" Close vim if the only window left open is NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
 
