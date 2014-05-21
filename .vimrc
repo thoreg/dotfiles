@@ -2,6 +2,7 @@
 " https://github.com/kien/ctrlp.vim
 " https://github.com/klen/python-mode
 " https://github.com/Lokaltog/powerline
+" https://github.com/scrooloose/nerdtree
 "
 " Encoding stuff ...
 set enc=utf-8
@@ -38,6 +39,7 @@ set ruler
 set backspace=indent,eol,start
 set laststatus=2
 set hlsearch
+
 "
 " ctrlp - Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -46,6 +48,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 "
 " Ignore case when searching
 set ignorecase
+
 "
 " Tab settings for Python development 
 set tabstop=4
@@ -59,7 +62,6 @@ set softtabstop=4
 let c_space_errors=1
 highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
-"
 " del whitespace errors
 map <F1> :1,$s/[ <tab>]\+$// <CR>
 
@@ -68,4 +70,10 @@ map <F1> :1,$s/[ <tab>]\+$// <CR>
 "also places the cursor in the last place that it was left."
 au BufWinLeave * mkview
 au BufWinEnter * silent loadview
+
+"
+" Nerdtree
+autocmd vimenter * NERDTree
+autocmd vimenter * if !argc() | NERDTree | endif
+map <C-n> :NERDTreeToggle<CR>
 
