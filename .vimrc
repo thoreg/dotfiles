@@ -1,4 +1,5 @@
 " Installed plugins
+" pip install --user git+git://github.com/Lokaltog/powerline
 " https://github.com/kien/ctrlp.vim
 " https://github.com/klen/python-mode
 " https://github.com/Lokaltog/powerline
