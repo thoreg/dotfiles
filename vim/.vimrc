@@ -6,6 +6,8 @@ set softtabstop=4
 "
 execute pathogen#infect()
 syntax on
+set background=dark
+colorscheme solarized
 filetype plugin indent on
 
 " Delete white space errors on save
