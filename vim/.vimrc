@@ -65,3 +65,6 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 " Show Documentation/Pydoc K (shows a popup with assignments)
 " Renaming <leader>r
 " Usages <leader>n (shows all the usages of a name)
+
+" isort - select visual block and press ctrl-i or just execute :Isort
+let g:vim_isort_map = '<C-i>'
