@@ -32,6 +32,14 @@ if has("autocmd")
     \| exe "normal! g'\"" | endif
 endif
 
+augroup BgHighlight
+    autocmd!
+    autocmd WinEnter * set colorcolumn=100
+    autocmd WinEnter * set cul
+    autocmd WinLeave * set colorcolumn=0
+    autocmd WinLeave * set nocul
+augroup END
+
 " Run pep8 on every save
 autocmd BufWritePost *.py call Flake8()
 
