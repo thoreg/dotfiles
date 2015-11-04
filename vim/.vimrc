@@ -8,6 +8,7 @@ set cursorline
 set colorcolumn=100
 set statusline+=%F\ %l\:%c
 set laststatus=2
+set mouse=r
 
 set background=dark
 colorscheme industry
