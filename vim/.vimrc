@@ -8,11 +8,10 @@ set cursorline
 set colorcolumn=100
 set statusline+=%F\ %l\:%c
 set laststatus=2
-" Send more characters for redraws
-set ttyfast
-"
-" Enable mouse use in all modes
-set mouse=a
+set ttyfast              " Send more characters for redraws
+set mouse=a              " Enable mouse use in all modes
+set history=1000         " Remember more commands and search history
+set undolevels=1000      " use many muchos levels of undo
 
 
 set background=dark
@@ -53,6 +52,9 @@ augroup END
 
 " Run pep8 on every save
 autocmd BufWritePost *.py call Flake8()
+let g:flake8_show_in_gutter=1
+let g:flake8_show_quickfix=1
+let g:flake8_show_in_file=1
 
 
 " Nerdtree
@@ -82,3 +84,11 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 
 " isort - select visual block and press ctrl-i or just execute :Isort
 let g:vim_isort_map = '<C-i>'
+
+" Mappings
+nnoremap <leader>p oimport pdb; pdb.set_trace()<Esc>
+" Easy window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
