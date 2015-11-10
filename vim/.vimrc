@@ -13,17 +13,14 @@ set mouse=a              " Enable mouse use in all modes
 set history=1000         " Remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo
 
+execute pathogen#infect()
+filetype plugin indent on
 
+syntax enable
 set background=dark
 colorscheme industry
 "set background=light
 "colorscheme darkblue
-
-
-execute pathogen#infect()
-syntax on
-filetype plugin indent on
-
 
 " Delete white space errors on save
 func! DeleteTrailingWS()
