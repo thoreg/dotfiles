@@ -12,6 +12,7 @@ set ttyfast              " Send more characters for redraws
 set mouse=a              " Enable mouse use in all modes
 set history=1000         " Remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo
+set autowriteall         " Save the file on buffer switch
 
 execute pathogen#infect()
 filetype plugin indent on
