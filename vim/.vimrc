@@ -65,6 +65,8 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
 " Close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" Ignore files with the following extensions
+let NERDTreeIgnore = ['\.pyc$']
 
 
 " CtrlP - fuzzy finder
