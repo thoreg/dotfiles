@@ -86,7 +86,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 let g:vim_isort_map = '<C-i>'
 
 " Mappings
-nnoremap <leader>p oimport pdb; pdb.set_trace()<Esc>
+nnoremap <leader>p oimport ipdb; ipdb.set_trace()<Esc>
 " Easy window navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
