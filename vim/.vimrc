@@ -19,7 +19,13 @@ filetype plugin indent on
 
 syntax enable
 set background=dark
-colorscheme industry
+
+if has('gui_running')
+    colorscheme solarized
+else
+    colorscheme industry
+endif
+
 "set background=light
 "colorscheme darkblue
 
