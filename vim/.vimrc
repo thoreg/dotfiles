@@ -29,6 +29,10 @@ endif
 "set background=light
 "colorscheme darkblue
 
+set tags=.tags,tags
+
+au BufNewFile,BufRead *.html set filetype=htmldjango
+
 " Delete white space errors on save
 func! DeleteTrailingWS()
     exe "normal mz"
