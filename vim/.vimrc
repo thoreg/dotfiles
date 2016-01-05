@@ -111,3 +111,8 @@ noremap <Right> <NOP>
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
+
+command WQ wq
+command Wq wq
+command W w
+command Q q
