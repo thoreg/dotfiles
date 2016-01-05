@@ -1,4 +1,4 @@
-set tabstop=8
+set tabstop=4
 set expandtab
 set shiftwidth=4
 set softtabstop=4
@@ -77,6 +77,8 @@ map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 " Ignore files with the following extensions
 let NERDTreeIgnore = ['\.pyc$']
+" Open File in a new Tab on double click
+let g:NERDTreeMapOpenInTabSilent = '<2-LeftMouse>'
 
 
 " CtrlP - fuzzy finder
