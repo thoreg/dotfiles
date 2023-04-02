@@ -1,0 +1,33 @@
+{
+    "[python]": {
+        "editor.formatOnType": true,
+        "editor.rulers": [79,120],
+    },
+    "python.analysis.addImport.exactMatchOnly": true,
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.completeFunctionParens": false,
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.pytestParameters": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "python.formatting.provider": "black",
+    "python.languageServer": "Pylance",
+
+    "[html]": {
+        "editor.matchBrackets": "never",
+        "editor.defaultFormatter": "monosans.djlint",
+        "editor.foldingStrategy": "indentation",
+    },
+    "editor.guides.indentation": false,
+    "editor.linkedEditing": true,
+    "editor.renderWhitespace": "all",
+
+    "files.trimTrailingWhitespace": true,
+    "files.autoSave": "onFocusChange",
+    "explorer.confirmDelete": false,
+    "html.autoClosingTags": true,
+    "window.title": "${activeEditorLong}${separator}${rootName}",
+    "workbench.colorTheme": "Solarized Dark+",
+    "workbench.settings.editor": "json",
+    "explorer.confirmDragAndDrop": false,
+    "window.zoomLevel": 2,
+}
